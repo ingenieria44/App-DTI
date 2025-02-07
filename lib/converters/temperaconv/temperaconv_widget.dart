@@ -284,7 +284,7 @@ class _TemperaconvWidgetState extends State<TemperaconvWidget> {
                               FormFieldController<double>(
                             _model.drpvlcconv2Value ??= 1.0,
                           ),
-                          options: List<double>.from([1.0, 60.0, 3600.0]),
+                          options: List<double>.from([1.0, 2.0, 3.0]),
                           optionLabels: const ['°C', 'K', '°F'],
                           onChanged: (val) =>
                               safeSetState(() => _model.drpvlcconv2Value = val),
