@@ -535,3 +535,12 @@ double? inwgsum000401865(List<double>? order) {
 
   return (sum * 0.00401865);
 }
+
+double? caidadepresuu(double? pasca) {
+  // multiplica el numero * 0.00401865
+  if (pasca != null) {
+    return pasca * 0.00401865;
+  } else {
+    return null;
+  }
+}

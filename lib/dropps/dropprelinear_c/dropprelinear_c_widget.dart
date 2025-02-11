@@ -564,6 +564,58 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                   ],
                 ),
               ),
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
+                    child: Text(
+                      'Result:',
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Inter',
+                            color: const Color(0xFFD20101),
+                            fontSize: 20.0,
+                            letterSpacing: 0.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
+                    child: Text(
+                      functions
+                          .caidadepresuu(functions.pressureDRpLinear(
+                              double.tryParse(
+                                  _model.preslenghtTextController.text),
+                              double.tryParse(
+                                  _model.airflowdropTextController.text),
+                              double.tryParse(
+                                  _model.velocidropTextController.text),
+                              _model.droplinearflowValue,
+                              _model.droplinearflowValue,
+                              _model.vvvValue))
+                          .toString(),
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Inter',
+                            fontSize: 20.0,
+                            letterSpacing: 0.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                    ),
+                  ),
+                  Text(
+                    'Inwg.',
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Inter',
+                          fontSize: 20.0,
+                          letterSpacing: 0.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
+                ],
+              ),
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                 child: Row(

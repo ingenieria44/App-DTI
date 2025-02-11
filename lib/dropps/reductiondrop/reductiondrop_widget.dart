@@ -558,6 +558,55 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                   ],
                 ),
               ),
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
+                    child: Text(
+                      'Result:',
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Inter',
+                            color: const Color(0xFFD20101),
+                            fontSize: 20.0,
+                            letterSpacing: 0.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(35.0, 0.0, 0.0, 0.0),
+                    child: Text(
+                      functions
+                          .caidadepresuu(functions.reductidropp(
+                              _model.v1reddrpValue,
+                              double.tryParse(_model.v1rTextController.text),
+                              double.tryParse(_model.d1TextController.text),
+                              double.tryParse(_model.v1rTextController.text),
+                              _model.unredd1Value,
+                              _model.unredd2Value))
+                          .toString(),
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Inter',
+                            fontSize: 20.0,
+                            letterSpacing: 0.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                    ),
+                  ),
+                  Text(
+                    'In wg.',
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Inter',
+                          fontSize: 20.0,
+                          letterSpacing: 0.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
+                ],
+              ),
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                 child: Row(
