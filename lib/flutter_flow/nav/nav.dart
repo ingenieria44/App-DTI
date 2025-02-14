@@ -34,92 +34,92 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
-      errorBuilder: (context, state) => const HomePageWidget(),
+      errorBuilder: (context, state) => HomePageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => const HomePageWidget(),
+          builder: (context, _) => HomePageWidget(),
         ),
         FFRoute(
           name: 'HomePage',
           path: '/homePage',
-          builder: (context, params) => const HomePageWidget(),
+          builder: (context, params) => HomePageWidget(),
         ),
         FFRoute(
           name: 'Ductulator',
           path: '/ductulator',
-          builder: (context, params) => const DuctulatorWidget(),
+          builder: (context, params) => DuctulatorWidget(),
         ),
         FFRoute(
           name: 'UnitConv',
           path: '/unitConv',
-          builder: (context, params) => const UnitConvWidget(),
+          builder: (context, params) => UnitConvWidget(),
         ),
         FFRoute(
           name: 'LenghtConverter',
           path: '/lenghtConverter',
-          builder: (context, params) => const LenghtConverterWidget(),
+          builder: (context, params) => LenghtConverterWidget(),
         ),
         FFRoute(
           name: 'FlowConverter',
           path: '/flowConverter',
-          builder: (context, params) => const FlowConverterWidget(),
+          builder: (context, params) => FlowConverterWidget(),
         ),
         FFRoute(
           name: 'DropprelinearC',
           path: '/dropprelinearC',
-          builder: (context, params) => const DropprelinearCWidget(),
+          builder: (context, params) => DropprelinearCWidget(),
         ),
         FFRoute(
           name: 'Elbow',
           path: '/elbow',
-          builder: (context, params) => const ElbowWidget(),
+          builder: (context, params) => ElbowWidget(),
         ),
         FFRoute(
           name: 'DroppreFitting',
           path: '/droppreFitting',
-          builder: (context, params) => const DroppreFittingWidget(),
+          builder: (context, params) => DroppreFittingWidget(),
         ),
         FFRoute(
           name: 'Reductiondrop',
           path: '/reductiondrop',
-          builder: (context, params) => const ReductiondropWidget(),
+          builder: (context, params) => ReductiondropWidget(),
         ),
         FFRoute(
           name: 'pressuredrop',
           path: '/pressuredrop',
-          builder: (context, params) => const PressuredropWidget(),
+          builder: (context, params) => PressuredropWidget(),
         ),
         FFRoute(
           name: 'Pressuredropsum',
           path: '/pressuredropsum',
-          builder: (context, params) => const PressuredropsumWidget(),
+          builder: (context, params) => PressuredropsumWidget(),
         ),
         FFRoute(
           name: 'CFD',
           path: '/cfd',
-          builder: (context, params) => const CfdWidget(),
+          builder: (context, params) => CfdWidget(),
         ),
         FFRoute(
           name: 'Velocityconv',
           path: '/velocityconv',
-          builder: (context, params) => const VelocityconvWidget(),
+          builder: (context, params) => VelocityconvWidget(),
         ),
         FFRoute(
           name: 'Temperaconv',
           path: '/temperaconv',
-          builder: (context, params) => const TemperaconvWidget(),
+          builder: (context, params) => TemperaconvWidget(),
         ),
         FFRoute(
           name: 'MassConverter',
           path: '/massConverter',
-          builder: (context, params) => const MassConverterWidget(),
+          builder: (context, params) => MassConverterWidget(),
         ),
         FFRoute(
           name: 'dataconv',
           path: '/dataconv',
-          builder: (context, params) => const DataconvWidget(),
+          builder: (context, params) => DataconvWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -285,7 +285,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

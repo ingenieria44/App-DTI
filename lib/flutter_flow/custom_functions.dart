@@ -169,8 +169,12 @@ double? convertFlow(
   double? l2,
   double? l3,
 ) {
-  // MULTIPLICA L1 X L2 Y LUEGO POR L3
-  return ((l1! / l2!) * l3!);
+  // return ((l1! / l2!) * l3!);
+  if (l1 != null && l2 != null && l2 != 0 && l3 != null) {
+    return ((l1 / l2) * l3);
+  } else {
+    return null;
+  }
 }
 
 double? convertmass(
@@ -179,7 +183,11 @@ double? convertmass(
   double? l3,
 ) {
   // MULTIPLICA L1 X L2 Y LUEGO POR L3
-  return ((l1! * l2!) * l3!);
+  if (l1 != null && l2 != null && l2 != 0 && l3 != null) {
+    return ((l1 / l2) * l3);
+  } else {
+    return null;
+  }
 }
 
 double? convertLenght(
@@ -188,7 +196,11 @@ double? convertLenght(
   double? l3,
 ) {
   // MULTIPLICA L1 X L2 Y LUEGO POR L3
-  return ((l1! / l2!) * l3!);
+  if (l1 != null && l2 != null && l2 != 0 && l3 != null) {
+    return ((l1 / l2) * l3);
+  } else {
+    return null;
+  }
 }
 
 double? convertTemperature(
@@ -225,7 +237,11 @@ double? convertVelocityCopy(
   double? l3,
 ) {
   // MULTIPLICA L1 X L2 Y LUEGO POR L3
-  return ((l1! * l2!) * l3!);
+  if (l1 != null && l2 != null && l2 != 0 && l3 != null) {
+    return ((l1 / l2) * l3);
+  } else {
+    return null;
+  }
 }
 
 String? elipdiam(
@@ -537,10 +553,10 @@ double? inwgsum000401865(List<double>? order) {
 }
 
 double? caidadepresuu(double? pasca) {
-  // multiplica el numero * 0.00401865
+  // return pasca * 0.00401865; el resultado que solo sean 3 unidades despues del punto
   if (pasca != null) {
-    return pasca * 0.00401865;
-  } else {
-    return null;
+    double result = pasca * 0.00401865;
+    return double.parse(result.toStringAsFixed(3));
   }
+  return null;
 }

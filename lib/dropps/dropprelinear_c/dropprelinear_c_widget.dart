@@ -52,16 +52,16 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFFD2D9DF),
+        backgroundColor: Color(0xFFD2D9DF),
         appBar: AppBar(
-          backgroundColor: const Color(0xFFE00000),
+          backgroundColor: Color(0xFFE00000),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back_ios_sharp,
               color: Colors.white,
               size: 30.0,
@@ -79,7 +79,7 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -89,14 +89,14 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Align(
-                alignment: const AlignmentDirectional(0.0, -1.0),
+                alignment: AlignmentDirectional(0.0, -1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
                   child: Text(
                     'Linear duct',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Inter',
-                          color: const Color(0xFFD20101),
+                          color: Color(0xFFD20101),
                           fontSize: 20.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.bold,
@@ -118,12 +118,12 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
                     child: Text(
                       'Lenght',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Inter',
-                            color: const Color(0xFFD20101),
+                            color: Color(0xFFD20101),
                             fontSize: 20.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.bold,
@@ -133,8 +133,8 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                   Expanded(
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
-                      child: SizedBox(
+                          EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
+                      child: Container(
                         width: 200.0,
                         child: TextFormField(
                           controller: _model.preslenghtTextController,
@@ -157,14 +157,14 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
@@ -203,14 +203,14 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: FlutterFlowDropDown<bool>(
                       controller: _model.droplinearlenghtValueController ??=
                           FormFieldController<bool>(
                         _model.droplinearlenghtValue ??= true,
                       ),
                       options: List<bool>.from([true, false]),
-                      optionLabels: const ['m.', 'ft.'],
+                      optionLabels: ['m.', 'ft.'],
                       onChanged: (val) => safeSetState(
                           () => _model.droplinearlenghtValue = val),
                       width: 100.0,
@@ -223,18 +223,18 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                                 fontWeight: FontWeight.bold,
                               ),
                       hintText: 'UNIT',
-                      icon: const Icon(
+                      icon: Icon(
                         Icons.keyboard_arrow_down_rounded,
                         color: Colors.white,
                         size: 24.0,
                       ),
-                      fillColor: const Color(0xFFE00000),
+                      fillColor: Color(0xFFE00000),
                       elevation: 2.0,
                       borderColor: Colors.transparent,
                       borderWidth: 0.0,
                       borderRadius: 8.0,
                       margin:
-                          const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                       hidesUnderline: true,
                       isOverButton: false,
                       isSearchable: false,
@@ -244,18 +244,18 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
                       child: Text(
                         'Air flow',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Inter',
-                              color: const Color(0xFFD20101),
+                              color: Color(0xFFD20101),
                               fontSize: 20.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
@@ -264,9 +264,9 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                     ),
                     Expanded(
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             25.0, 0.0, 25.0, 0.0),
-                        child: SizedBox(
+                        child: Container(
                           width: 200.0,
                           child: TextFormField(
                             controller: _model.airflowdropTextController,
@@ -289,14 +289,14 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                                     letterSpacing: 0.0,
                                   ),
                               enabledBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
@@ -337,14 +337,14 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                       child: FlutterFlowDropDown<bool>(
                         controller: _model.droplinearflowValueController ??=
                             FormFieldController<bool>(
                           _model.droplinearflowValue ??= false,
                         ),
                         options: List<bool>.from([false, true]),
-                        optionLabels: const ['cfm.', 'm3/h.'],
+                        optionLabels: ['cfm.', 'm3/h.'],
                         onChanged: (val) => safeSetState(
                             () => _model.droplinearflowValue = val),
                         width: 100.0,
@@ -357,17 +357,17 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                                   fontWeight: FontWeight.bold,
                                 ),
                         hintText: 'UNIT',
-                        icon: const Icon(
+                        icon: Icon(
                           Icons.keyboard_arrow_down_rounded,
                           color: Color(0xFFF6F6F6),
                           size: 24.0,
                         ),
-                        fillColor: const Color(0xFFE00000),
+                        fillColor: Color(0xFFE00000),
                         elevation: 2.0,
                         borderColor: Colors.transparent,
                         borderWidth: 0.0,
                         borderRadius: 8.0,
-                        margin: const EdgeInsetsDirectional.fromSTEB(
+                        margin: EdgeInsetsDirectional.fromSTEB(
                             12.0, 0.0, 12.0, 0.0),
                         hidesUnderline: true,
                         isOverButton: false,
@@ -379,18 +379,18 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
                       child: Text(
                         'Velocity',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Inter',
-                              color: const Color(0xFFD20101),
+                              color: Color(0xFFD20101),
                               fontSize: 20.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
@@ -399,9 +399,9 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                     ),
                     Expanded(
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             25.0, 0.0, 25.0, 0.0),
-                        child: SizedBox(
+                        child: Container(
                           width: 200.0,
                           child: TextFormField(
                             controller: _model.velocidropTextController,
@@ -424,14 +424,14 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                                     letterSpacing: 0.0,
                                   ),
                               enabledBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
@@ -472,14 +472,14 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                       child: FlutterFlowDropDown<bool>(
                         controller: _model.vvvValueController ??=
                             FormFieldController<bool>(
                           _model.vvvValue ??= true,
                         ),
                         options: List<bool>.from([true, false]),
-                        optionLabels: const ['m/s.', 'fpm.'],
+                        optionLabels: ['m/s.', 'fpm.'],
                         onChanged: (val) =>
                             safeSetState(() => _model.vvvValue = val),
                         width: 100.0,
@@ -492,17 +492,17 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                                   fontWeight: FontWeight.bold,
                                 ),
                         hintText: 'UNIT',
-                        icon: const Icon(
+                        icon: Icon(
                           Icons.keyboard_arrow_down_rounded,
                           color: Color(0xFFF4F4F4),
                           size: 24.0,
                         ),
-                        fillColor: const Color(0xFFE00000),
+                        fillColor: Color(0xFFE00000),
                         elevation: 2.0,
                         borderColor: Colors.transparent,
                         borderWidth: 0.0,
                         borderRadius: 8.0,
-                        margin: const EdgeInsetsDirectional.fromSTEB(
+                        margin: EdgeInsetsDirectional.fromSTEB(
                             12.0, 0.0, 12.0, 0.0),
                         hidesUnderline: true,
                         isOverButton: false,
@@ -514,7 +514,7 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 25.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 25.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -522,7 +522,7 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                       'Result:',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Inter',
-                            color: const Color(0xFFD20101),
+                            color: Color(0xFFD20101),
                             fontSize: 20.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.bold,
@@ -530,7 +530,7 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
                       child: Text(
                         functions
                             .pressureDRpLinear(
@@ -569,12 +569,12 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
                     child: Text(
                       'Result:',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Inter',
-                            color: const Color(0xFFD20101),
+                            color: Color(0xFFD20101),
                             fontSize: 20.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.bold,
@@ -583,7 +583,7 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
                     child: Text(
                       functions
                           .caidadepresuu(functions.pressureDRpLinear(
@@ -617,13 +617,13 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(200.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(200.0, 0.0, 0.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () async {
                           FFAppState().addToDrop(functions.pressureDRpLinear(
@@ -643,11 +643,11 @@ class _DropprelinearCWidgetState extends State<DropprelinearCWidget> {
                         options: FFButtonOptions(
                           width: 200.0,
                           height: 50.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: const Color(0xFFE00000),
+                          color: Color(0xFFE00000),
                           textStyle:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Inter Tight',

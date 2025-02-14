@@ -46,16 +46,16 @@ class _ElbowWidgetState extends State<ElbowWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFFD2D9DF),
+        backgroundColor: Color(0xFFD2D9DF),
         appBar: AppBar(
-          backgroundColor: const Color(0xFFE00000),
+          backgroundColor: Color(0xFFE00000),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back_ios_sharp,
               color: Colors.white,
               size: 30.0,
@@ -73,7 +73,7 @@ class _ElbowWidgetState extends State<ElbowWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -83,14 +83,14 @@ class _ElbowWidgetState extends State<ElbowWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Align(
-                alignment: const AlignmentDirectional(0.0, -1.0),
+                alignment: AlignmentDirectional(0.0, -1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
                   child: Text(
                     'Elbow',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Inter',
-                          color: const Color(0xFFD20101),
+                          color: Color(0xFFD20101),
                           fontSize: 20.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.bold,
@@ -112,12 +112,12 @@ class _ElbowWidgetState extends State<ElbowWidget> {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
                     child: Text(
                       'Velocity',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Inter',
-                            color: const Color(0xFFD20101),
+                            color: Color(0xFFD20101),
                             fontSize: 20.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.bold,
@@ -127,8 +127,8 @@ class _ElbowWidgetState extends State<ElbowWidget> {
                   Expanded(
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
-                      child: SizedBox(
+                          EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
+                      child: Container(
                         width: 200.0,
                         child: TextFormField(
                           controller: _model.textController,
@@ -151,14 +151,14 @@ class _ElbowWidgetState extends State<ElbowWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
@@ -197,14 +197,14 @@ class _ElbowWidgetState extends State<ElbowWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: FlutterFlowDropDown<bool>(
                       controller: _model.droplinearlenghtValueController ??=
                           FormFieldController<bool>(
                         _model.droplinearlenghtValue ??= true,
                       ),
                       options: List<bool>.from([true, false]),
-                      optionLabels: const ['m/s.', 'fpm.'],
+                      optionLabels: ['m/s.', 'fpm.'],
                       onChanged: (val) => safeSetState(
                           () => _model.droplinearlenghtValue = val),
                       width: 100.0,
@@ -217,18 +217,18 @@ class _ElbowWidgetState extends State<ElbowWidget> {
                                 fontWeight: FontWeight.bold,
                               ),
                       hintText: 'UNIT',
-                      icon: const Icon(
+                      icon: Icon(
                         Icons.keyboard_arrow_down_rounded,
                         color: Color(0xFFF7F8F8),
                         size: 24.0,
                       ),
-                      fillColor: const Color(0xFFE00000),
+                      fillColor: Color(0xFFE00000),
                       elevation: 2.0,
                       borderColor: Colors.transparent,
                       borderWidth: 0.0,
                       borderRadius: 8.0,
                       margin:
-                          const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                       hidesUnderline: true,
                       isOverButton: false,
                       isSearchable: false,
@@ -238,18 +238,18 @@ class _ElbowWidgetState extends State<ElbowWidget> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
                       child: Text(
                         'Angle',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Inter',
-                              color: const Color(0xFFD20101),
+                              color: Color(0xFFD20101),
                               fontSize: 20.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
@@ -258,14 +258,14 @@ class _ElbowWidgetState extends State<ElbowWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 10.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 10.0, 0.0),
                       child: FlutterFlowDropDown<bool>(
                         controller: _model.valorkValueController ??=
                             FormFieldController<bool>(
                           _model.valorkValue ??= false,
                         ),
                         options: List<bool>.from([true, false]),
-                        optionLabels: const ['45°', '90°'],
+                        optionLabels: ['45°', '90°'],
                         onChanged: (val) =>
                             safeSetState(() => _model.valorkValue = val),
                         width: 100.0,
@@ -278,17 +278,17 @@ class _ElbowWidgetState extends State<ElbowWidget> {
                                   fontWeight: FontWeight.bold,
                                 ),
                         hintText: 'UNIT',
-                        icon: const Icon(
+                        icon: Icon(
                           Icons.keyboard_arrow_down_rounded,
                           color: Color(0xFFEFF1F2),
                           size: 24.0,
                         ),
-                        fillColor: const Color(0xFFE00000),
+                        fillColor: Color(0xFFE00000),
                         elevation: 2.0,
                         borderColor: Colors.transparent,
                         borderWidth: 0.0,
                         borderRadius: 8.0,
-                        margin: const EdgeInsetsDirectional.fromSTEB(
+                        margin: EdgeInsetsDirectional.fromSTEB(
                             12.0, 0.0, 12.0, 0.0),
                         hidesUnderline: true,
                         isOverButton: false,
@@ -300,7 +300,7 @@ class _ElbowWidgetState extends State<ElbowWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 25.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 25.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -308,7 +308,7 @@ class _ElbowWidgetState extends State<ElbowWidget> {
                       'Result:',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Inter',
-                            color: const Color(0xFFD20101),
+                            color: Color(0xFFD20101),
                             fontSize: 20.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.bold,
@@ -316,7 +316,7 @@ class _ElbowWidgetState extends State<ElbowWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
                       child: Text(
                         functions
                             .elbowdroopp(
@@ -349,12 +349,12 @@ class _ElbowWidgetState extends State<ElbowWidget> {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                     child: Text(
                       'Result:',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Inter',
-                            color: const Color(0xFFD20101),
+                            color: Color(0xFFD20101),
                             fontSize: 20.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.bold,
@@ -363,7 +363,7 @@ class _ElbowWidgetState extends State<ElbowWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(45.0, 0.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(45.0, 0.0, 0.0, 0.0),
                     child: Text(
                       functions
                           .caidadepresuu(functions.elbowdroopp(
@@ -391,13 +391,13 @@ class _ElbowWidgetState extends State<ElbowWidget> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(180.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(180.0, 0.0, 0.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () async {
                           FFAppState().addToDrop(functions.elbowdroopp(
@@ -411,11 +411,11 @@ class _ElbowWidgetState extends State<ElbowWidget> {
                         options: FFButtonOptions(
                           width: 200.0,
                           height: 50.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: const Color(0xFFE00000),
+                          color: Color(0xFFE00000),
                           textStyle:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Inter Tight',

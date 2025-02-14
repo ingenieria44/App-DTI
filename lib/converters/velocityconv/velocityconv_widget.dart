@@ -25,7 +25,7 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
     super.initState();
     _model = createModel(context, () => VelocityconvModel());
 
-    _model.velintconvTextController ??= TextEditingController(text: '0');
+    _model.velintconvTextController ??= TextEditingController();
     _model.velintconvFocusNode ??= FocusNode();
   }
 
@@ -45,16 +45,16 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFFD2D9DF),
+        backgroundColor: Color(0xFFD2D9DF),
         appBar: AppBar(
-          backgroundColor: const Color(0xFFE00000),
+          backgroundColor: Color(0xFFE00000),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back_ios_sharp,
               color: Colors.white,
               size: 30.0,
@@ -71,7 +71,7 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
               fontSize: 22.0,
               letterSpacing: 0.0,
               shadows: [
-                const Shadow(
+                Shadow(
                   color: Colors.black,
                   offset: Offset(2.0, 2.0),
                   blurRadius: 2.0,
@@ -79,7 +79,7 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
               ],
             ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -89,14 +89,14 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Align(
-                alignment: const AlignmentDirectional(0.0, -1.0),
+                alignment: AlignmentDirectional(0.0, -1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
                   child: Text(
                     'Velocity Converter',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Inter',
-                          color: const Color(0xFFD20101),
+                          color: Color(0xFFD20101),
                           fontSize: 20.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.bold,
@@ -114,18 +114,18 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 55.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 55.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
                       child: Text(
                         'Velocity',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Inter',
-                              color: const Color(0xFFD20101),
+                              color: Color(0xFFD20101),
                               fontSize: 20.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
@@ -141,8 +141,8 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
                   Expanded(
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
-                      child: SizedBox(
+                          EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
+                      child: Container(
                         width: 200.0,
                         child: TextFormField(
                           controller: _model.velintconvTextController,
@@ -165,14 +165,14 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
@@ -210,7 +210,7 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: FlutterFlowDropDown<double>(
                       controller: _model.drpvlcconv1ValueController ??=
                           FormFieldController<double>(
@@ -227,7 +227,7 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
                         0.3048,
                         0.0000846667
                       ]),
-                      optionLabels: const [
+                      optionLabels: [
                         'm/s.',
                         'm/min.',
                         'm/hr.',
@@ -250,18 +250,18 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
                                 fontWeight: FontWeight.bold,
                               ),
                       hintText: 'UNIT',
-                      icon: const Icon(
+                      icon: Icon(
                         Icons.keyboard_arrow_down_rounded,
                         color: Color(0xFFF4F4F4),
                         size: 24.0,
                       ),
-                      fillColor: const Color(0xFFE00000),
+                      fillColor: Color(0xFFE00000),
                       elevation: 2.0,
                       borderColor: Colors.transparent,
                       borderWidth: 0.0,
                       borderRadius: 8.0,
                       margin:
-                          const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                       hidesUnderline: true,
                       isOverButton: false,
                       isSearchable: false,
@@ -271,16 +271,16 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
                 ],
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 55.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 55.0, 10.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               10.0, 0.0, 35.0, 0.0),
                           child: Text(
                             'Convert to:',
@@ -288,7 +288,7 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Inter',
-                                  color: const Color(0xFFD20101),
+                                  color: Color(0xFFD20101),
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
@@ -298,7 +298,7 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 35.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 35.0, 0.0),
                         child: FlutterFlowDropDown<double>(
                           controller: _model.drpvlcconv2ValueController ??=
                               FormFieldController<double>(
@@ -315,7 +315,7 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
                             3.280839895,
                             11811.023622
                           ]),
-                          optionLabels: const [
+                          optionLabels: [
                             'm/s.',
                             'm/min.',
                             'm/hr.',
@@ -338,17 +338,17 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
                                     fontWeight: FontWeight.bold,
                                   ),
                           hintText: 'UNIT',
-                          icon: const Icon(
+                          icon: Icon(
                             Icons.keyboard_arrow_down_rounded,
                             color: Color(0xFFF8F8F8),
                             size: 24.0,
                           ),
-                          fillColor: const Color(0xFFE00000),
+                          fillColor: Color(0xFFE00000),
                           elevation: 2.0,
                           borderColor: Colors.transparent,
                           borderWidth: 0.0,
                           borderRadius: 8.0,
-                          margin: const EdgeInsetsDirectional.fromSTEB(
+                          margin: EdgeInsetsDirectional.fromSTEB(
                               12.0, 0.0, 12.0, 0.0),
                           hidesUnderline: true,
                           isOverButton: false,
@@ -361,7 +361,7 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 25.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 25.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -369,7 +369,7 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
                       'Result:',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Inter',
-                            color: const Color(0xFFD20101),
+                            color: Color(0xFFD20101),
                             fontSize: 20.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.bold,
@@ -377,7 +377,7 @@ class _VelocityconvWidgetState extends State<VelocityconvWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: Text(
                         functions
                             .convertmass(

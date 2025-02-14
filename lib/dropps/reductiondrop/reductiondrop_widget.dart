@@ -52,16 +52,16 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFFD2D9DF),
+        backgroundColor: Color(0xFFD2D9DF),
         appBar: AppBar(
-          backgroundColor: const Color(0xFFE00000),
+          backgroundColor: Color(0xFFE00000),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back_ios_sharp,
               color: Colors.white,
               size: 30.0,
@@ -79,7 +79,7 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -89,14 +89,14 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Align(
-                alignment: const AlignmentDirectional(0.0, -1.0),
+                alignment: AlignmentDirectional(0.0, -1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
                   child: Text(
                     'Reduction',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Inter',
-                          color: const Color(0xFFD20101),
+                          color: Color(0xFFD20101),
                           fontSize: 20.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.bold,
@@ -118,12 +118,12 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
                     child: Text(
                       'Diameter 1',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Inter',
-                            color: const Color(0xFFD20101),
+                            color: Color(0xFFD20101),
                             fontSize: 20.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.bold,
@@ -133,8 +133,8 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                   Expanded(
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
-                      child: SizedBox(
+                          EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
+                      child: Container(
                         width: 200.0,
                         child: TextFormField(
                           controller: _model.d1TextController,
@@ -157,14 +157,14 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
@@ -202,14 +202,14 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: FlutterFlowDropDown<bool>(
                       controller: _model.unredd1ValueController ??=
                           FormFieldController<bool>(
                         _model.unredd1Value ??= true,
                       ),
                       options: List<bool>.from([true, false]),
-                      optionLabels: const ['in.', 'mm.'],
+                      optionLabels: ['in.', 'mm.'],
                       onChanged: (val) =>
                           safeSetState(() => _model.unredd1Value = val),
                       width: 100.0,
@@ -222,18 +222,18 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                                 fontWeight: FontWeight.bold,
                               ),
                       hintText: 'UNIT',
-                      icon: const Icon(
+                      icon: Icon(
                         Icons.keyboard_arrow_down_rounded,
                         color: Color(0xFFF1F3F4),
                         size: 24.0,
                       ),
-                      fillColor: const Color(0xFFE00000),
+                      fillColor: Color(0xFFE00000),
                       elevation: 2.0,
                       borderColor: Colors.transparent,
                       borderWidth: 0.0,
                       borderRadius: 8.0,
                       margin:
-                          const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                       hidesUnderline: true,
                       isOverButton: false,
                       isSearchable: false,
@@ -243,18 +243,18 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
                       child: Text(
                         'Diameter 2',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Inter',
-                              color: const Color(0xFFD20101),
+                              color: Color(0xFFD20101),
                               fontSize: 20.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
@@ -263,9 +263,9 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                     ),
                     Expanded(
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             25.0, 0.0, 25.0, 0.0),
-                        child: SizedBox(
+                        child: Container(
                           width: 200.0,
                           child: TextFormField(
                             controller: _model.d2TextController,
@@ -288,14 +288,14 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                                     letterSpacing: 0.0,
                                   ),
                               enabledBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
@@ -335,14 +335,14 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                       child: FlutterFlowDropDown<bool>(
                         controller: _model.unredd2ValueController ??=
                             FormFieldController<bool>(
                           _model.unredd2Value ??= true,
                         ),
                         options: List<bool>.from([true, false]),
-                        optionLabels: const ['in.', 'mm.'],
+                        optionLabels: ['in.', 'mm.'],
                         onChanged: (val) =>
                             safeSetState(() => _model.unredd2Value = val),
                         width: 100.0,
@@ -355,17 +355,17 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                                   fontWeight: FontWeight.bold,
                                 ),
                         hintText: 'UNIT',
-                        icon: const Icon(
+                        icon: Icon(
                           Icons.keyboard_arrow_down_rounded,
                           color: Color(0xFFEEEFF2),
                           size: 24.0,
                         ),
-                        fillColor: const Color(0xFFE00000),
+                        fillColor: Color(0xFFE00000),
                         elevation: 2.0,
                         borderColor: Colors.transparent,
                         borderWidth: 0.0,
                         borderRadius: 8.0,
-                        margin: const EdgeInsetsDirectional.fromSTEB(
+                        margin: EdgeInsetsDirectional.fromSTEB(
                             12.0, 0.0, 12.0, 0.0),
                         hidesUnderline: true,
                         isOverButton: false,
@@ -377,18 +377,18 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
                       child: Text(
                         'Velocity',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Inter',
-                              color: const Color(0xFFD20101),
+                              color: Color(0xFFD20101),
                               fontSize: 20.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
@@ -397,9 +397,9 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                     ),
                     Expanded(
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             25.0, 0.0, 25.0, 0.0),
-                        child: SizedBox(
+                        child: Container(
                           width: 200.0,
                           child: TextFormField(
                             controller: _model.v1rTextController,
@@ -422,14 +422,14 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                                     letterSpacing: 0.0,
                                   ),
                               enabledBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
@@ -469,14 +469,14 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                       child: FlutterFlowDropDown<bool>(
                         controller: _model.v1reddrpValueController ??=
                             FormFieldController<bool>(
                           _model.v1reddrpValue ??= true,
                         ),
                         options: List<bool>.from([true, false]),
-                        optionLabels: const ['m/s.', 'fpm.'],
+                        optionLabels: ['m/s.', 'fpm.'],
                         onChanged: (val) =>
                             safeSetState(() => _model.v1reddrpValue = val),
                         width: 100.0,
@@ -489,17 +489,17 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                                   fontWeight: FontWeight.bold,
                                 ),
                         hintText: 'UNIT',
-                        icon: const Icon(
+                        icon: Icon(
                           Icons.keyboard_arrow_down_rounded,
                           color: Colors.white,
                           size: 24.0,
                         ),
-                        fillColor: const Color(0xFFE00000),
+                        fillColor: Color(0xFFE00000),
                         elevation: 2.0,
                         borderColor: Colors.transparent,
                         borderWidth: 0.0,
                         borderRadius: 8.0,
-                        margin: const EdgeInsetsDirectional.fromSTEB(
+                        margin: EdgeInsetsDirectional.fromSTEB(
                             12.0, 0.0, 12.0, 0.0),
                         hidesUnderline: true,
                         isOverButton: false,
@@ -511,7 +511,7 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 25.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 25.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -519,7 +519,7 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                       'Result:',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Inter',
-                            color: const Color(0xFFD20101),
+                            color: Color(0xFFD20101),
                             fontSize: 20.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.bold,
@@ -527,7 +527,7 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
                       child: Text(
                         functions
                             .reductidropp(
@@ -563,12 +563,12 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
                     child: Text(
                       'Result:',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Inter',
-                            color: const Color(0xFFD20101),
+                            color: Color(0xFFD20101),
                             fontSize: 20.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.bold,
@@ -577,7 +577,7 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(35.0, 0.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(35.0, 0.0, 0.0, 0.0),
                     child: Text(
                       functions
                           .caidadepresuu(functions.reductidropp(
@@ -608,13 +608,13 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(180.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(180.0, 0.0, 0.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () async {
                           FFAppState().addToDrop(functions.reductidropp(
@@ -631,11 +631,11 @@ class _ReductiondropWidgetState extends State<ReductiondropWidget> {
                         options: FFButtonOptions(
                           width: 200.0,
                           height: 50.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: const Color(0xFFE00000),
+                          color: Color(0xFFE00000),
                           textStyle:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Inter Tight',

@@ -25,7 +25,7 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
     super.initState();
     _model = createModel(context, () => FlowConverterModel());
 
-    _model.textController ??= TextEditingController(text: '0');
+    _model.textController ??= TextEditingController();
     _model.textFieldFocusNode ??= FocusNode();
   }
 
@@ -45,16 +45,16 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFFD2D9DF),
+        backgroundColor: Color(0xFFD2D9DF),
         appBar: AppBar(
-          backgroundColor: const Color(0xFFE00000),
+          backgroundColor: Color(0xFFE00000),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back_ios_sharp,
               color: Colors.white,
               size: 30.0,
@@ -71,7 +71,7 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
               fontSize: 22.0,
               letterSpacing: 0.0,
               shadows: [
-                const Shadow(
+                Shadow(
                   color: Colors.black,
                   offset: Offset(2.0, 2.0),
                   blurRadius: 2.0,
@@ -79,7 +79,7 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
               ],
             ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -89,14 +89,14 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Align(
-                alignment: const AlignmentDirectional(0.0, -1.0),
+                alignment: AlignmentDirectional(0.0, -1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
                   child: Text(
                     'Flow Converter',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Inter',
-                          color: const Color(0xFFD20101),
+                          color: Color(0xFFD20101),
                           fontSize: 20.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.bold,
@@ -114,18 +114,18 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 55.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 55.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
                       child: Text(
                         'Flow',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Inter',
-                              color: const Color(0xFFD20101),
+                              color: Color(0xFFD20101),
                               fontSize: 20.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
@@ -141,8 +141,8 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
                   Expanded(
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
-                      child: SizedBox(
+                          EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
+                      child: Container(
                         width: 200.0,
                         child: TextFormField(
                           controller: _model.textController,
@@ -165,14 +165,14 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
@@ -210,7 +210,7 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: FlutterFlowDropDown<double>(
                       controller: _model.dropDownValueController1 ??=
                           FormFieldController<double>(
@@ -218,15 +218,15 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
                       ),
                       options: List<double>.from([
                         1.0,
-                        3600.0,
-                        60.0,
-                        3.6,
-                        0.060000000000000005,
-                        0.0010000000000000009,
-                        1.6990092,
-                        101.94048
+                        0.0002777777777777778,
+                        0.016666666666666666,
+                        0.2777777777777778,
+                        16.666666666666664,
+                        999.9999999999991,
+                        0.5885783314180995,
+                        0.009809645785462262
                       ]),
-                      optionLabels: const [
+                      optionLabels: [
                         'm3/h.',
                         'm3/s.',
                         'm3/min',
@@ -248,18 +248,18 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
                                 fontWeight: FontWeight.bold,
                               ),
                       hintText: 'UNIT',
-                      icon: const Icon(
+                      icon: Icon(
                         Icons.keyboard_arrow_down_rounded,
                         color: Colors.white,
                         size: 24.0,
                       ),
-                      fillColor: const Color(0xFFE00000),
+                      fillColor: Color(0xFFE00000),
                       elevation: 2.0,
                       borderColor: Colors.transparent,
                       borderWidth: 0.0,
                       borderRadius: 8.0,
                       margin:
-                          const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                       hidesUnderline: true,
                       isOverButton: false,
                       isSearchable: false,
@@ -269,16 +269,16 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
                 ],
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 55.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 55.0, 10.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               10.0, 0.0, 35.0, 0.0),
                           child: Text(
                             'Convert to:',
@@ -286,7 +286,7 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Inter',
-                                  color: const Color(0xFFD20101),
+                                  color: Color(0xFFD20101),
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
@@ -296,7 +296,7 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 35.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 35.0, 0.0),
                         child: FlutterFlowDropDown<double>(
                           controller: _model.dropDownValueController2 ??=
                               FormFieldController<double>(
@@ -312,7 +312,7 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
                             0.5885783314180995,
                             0.009809645785462262
                           ]),
-                          optionLabels: const [
+                          optionLabels: [
                             'm3/h.',
                             'm3/s.',
                             'm3/min.',
@@ -334,17 +334,17 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
                                     fontWeight: FontWeight.bold,
                                   ),
                           hintText: 'UNIT',
-                          icon: const Icon(
+                          icon: Icon(
                             Icons.keyboard_arrow_down_rounded,
                             color: Color(0xFFEAEAEC),
                             size: 24.0,
                           ),
-                          fillColor: const Color(0xFFE00000),
+                          fillColor: Color(0xFFE00000),
                           elevation: 2.0,
                           borderColor: Colors.transparent,
                           borderWidth: 0.0,
                           borderRadius: 8.0,
-                          margin: const EdgeInsetsDirectional.fromSTEB(
+                          margin: EdgeInsetsDirectional.fromSTEB(
                               12.0, 0.0, 12.0, 0.0),
                           hidesUnderline: true,
                           isOverButton: false,
@@ -357,7 +357,7 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 25.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 25.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -365,7 +365,7 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
                       'Result:',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Inter',
-                            color: const Color(0xFFD20101),
+                            color: Color(0xFFD20101),
                             fontSize: 20.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.bold,
@@ -373,7 +373,7 @@ class _FlowConverterWidgetState extends State<FlowConverterWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: Text(
                         functions
                             .convertLenght(

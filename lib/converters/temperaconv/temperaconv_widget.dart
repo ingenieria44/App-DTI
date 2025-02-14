@@ -45,16 +45,16 @@ class _TemperaconvWidgetState extends State<TemperaconvWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFFD2D9DF),
+        backgroundColor: Color(0xFFD2D9DF),
         appBar: AppBar(
-          backgroundColor: const Color(0xFFE00000),
+          backgroundColor: Color(0xFFE00000),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back_ios_sharp,
               color: Colors.white,
               size: 30.0,
@@ -71,7 +71,7 @@ class _TemperaconvWidgetState extends State<TemperaconvWidget> {
               fontSize: 22.0,
               letterSpacing: 0.0,
               shadows: [
-                const Shadow(
+                Shadow(
                   color: Colors.black,
                   offset: Offset(2.0, 2.0),
                   blurRadius: 2.0,
@@ -79,7 +79,7 @@ class _TemperaconvWidgetState extends State<TemperaconvWidget> {
               ],
             ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -89,14 +89,14 @@ class _TemperaconvWidgetState extends State<TemperaconvWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Align(
-                alignment: const AlignmentDirectional(0.0, -1.0),
+                alignment: AlignmentDirectional(0.0, -1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
                   child: Text(
                     'Temperature Converter',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Inter',
-                          color: const Color(0xFFD20101),
+                          color: Color(0xFFD20101),
                           fontSize: 20.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.bold,
@@ -114,18 +114,18 @@ class _TemperaconvWidgetState extends State<TemperaconvWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 55.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 55.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
                       child: Text(
                         'Temperature ',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Inter',
-                              color: const Color(0xFFD20101),
+                              color: Color(0xFFD20101),
                               fontSize: 20.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
@@ -141,8 +141,8 @@ class _TemperaconvWidgetState extends State<TemperaconvWidget> {
                   Expanded(
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
-                      child: SizedBox(
+                          EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
+                      child: Container(
                         width: 200.0,
                         child: TextFormField(
                           controller: _model.velintconvTextController,
@@ -165,14 +165,14 @@ class _TemperaconvWidgetState extends State<TemperaconvWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
@@ -210,14 +210,14 @@ class _TemperaconvWidgetState extends State<TemperaconvWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: FlutterFlowDropDown<double>(
                       controller: _model.drpvlcconv1ValueController ??=
                           FormFieldController<double>(
                         _model.drpvlcconv1Value ??= 1.0,
                       ),
                       options: List<double>.from([1.0, 2.0, 3.0]),
-                      optionLabels: const ['° C', 'K', '°F'],
+                      optionLabels: ['° C', 'K', '°F'],
                       onChanged: (val) =>
                           safeSetState(() => _model.drpvlcconv1Value = val),
                       width: 200.0,
@@ -230,18 +230,18 @@ class _TemperaconvWidgetState extends State<TemperaconvWidget> {
                                 fontWeight: FontWeight.bold,
                               ),
                       hintText: 'UNIT',
-                      icon: const Icon(
+                      icon: Icon(
                         Icons.keyboard_arrow_down_rounded,
                         color: Color(0xFFF6F6F6),
                         size: 24.0,
                       ),
-                      fillColor: const Color(0xFFE00000),
+                      fillColor: Color(0xFFE00000),
                       elevation: 2.0,
                       borderColor: Colors.transparent,
                       borderWidth: 0.0,
                       borderRadius: 8.0,
                       margin:
-                          const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                       hidesUnderline: true,
                       isOverButton: false,
                       isSearchable: false,
@@ -251,16 +251,16 @@ class _TemperaconvWidgetState extends State<TemperaconvWidget> {
                 ],
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 55.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 55.0, 10.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               10.0, 0.0, 35.0, 0.0),
                           child: Text(
                             'Convert to:',
@@ -268,7 +268,7 @@ class _TemperaconvWidgetState extends State<TemperaconvWidget> {
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Inter',
-                                  color: const Color(0xFFD20101),
+                                  color: Color(0xFFD20101),
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
@@ -278,14 +278,14 @@ class _TemperaconvWidgetState extends State<TemperaconvWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 35.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 35.0, 0.0),
                         child: FlutterFlowDropDown<double>(
                           controller: _model.drpvlcconv2ValueController ??=
                               FormFieldController<double>(
                             _model.drpvlcconv2Value ??= 1.0,
                           ),
                           options: List<double>.from([1.0, 2.0, 3.0]),
-                          optionLabels: const ['°C', 'K', '°F'],
+                          optionLabels: ['°C', 'K', '°F'],
                           onChanged: (val) =>
                               safeSetState(() => _model.drpvlcconv2Value = val),
                           width: 200.0,
@@ -298,17 +298,17 @@ class _TemperaconvWidgetState extends State<TemperaconvWidget> {
                                     fontWeight: FontWeight.bold,
                                   ),
                           hintText: 'UNIT',
-                          icon: const Icon(
+                          icon: Icon(
                             Icons.keyboard_arrow_down_rounded,
                             color: Colors.white,
                             size: 24.0,
                           ),
-                          fillColor: const Color(0xFFE00000),
+                          fillColor: Color(0xFFE00000),
                           elevation: 2.0,
                           borderColor: Colors.transparent,
                           borderWidth: 0.0,
                           borderRadius: 8.0,
-                          margin: const EdgeInsetsDirectional.fromSTEB(
+                          margin: EdgeInsetsDirectional.fromSTEB(
                               12.0, 0.0, 12.0, 0.0),
                           hidesUnderline: true,
                           isOverButton: false,
@@ -321,7 +321,7 @@ class _TemperaconvWidgetState extends State<TemperaconvWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 25.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 25.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -329,7 +329,7 @@ class _TemperaconvWidgetState extends State<TemperaconvWidget> {
                       'Result:',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Inter',
-                            color: const Color(0xFFD20101),
+                            color: Color(0xFFD20101),
                             fontSize: 20.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.bold,
@@ -337,7 +337,7 @@ class _TemperaconvWidgetState extends State<TemperaconvWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: Text(
                         functions
                             .convertTemperature(

@@ -26,27 +26,15 @@ class _HomePageWidgetState extends State<HomePageWidget>
     _model = createModel(context, () => HomePageModel());
 
     animationsMap.addAll({
-      'imageOnPageLoadAnimation1': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
-        effectsBuilder: () => [
-          RotateEffect(
-            curve: Curves.easeInOut,
-            delay: 0.0.ms,
-            duration: 600.0.ms,
-            begin: 0.0,
-            end: 1.0,
-          ),
-        ],
-      ),
-      'imageOnPageLoadAnimation2': AnimationInfo(
+      'imageOnPageLoadAnimation': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
           ScaleEffect(
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(1.0, 1.0),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(1.0, 1.0),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -69,25 +57,31 @@ class _HomePageWidgetState extends State<HomePageWidget>
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFFD2D9DF),
+        backgroundColor: Color(0xFFD2D9DF),
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: const AlignmentDirectional(-1.0, 0.0),
+            alignment: AlignmentDirectional(-1.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                   child: Container(
                     width: 614.0,
                     height: 100.0,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       color: Color(0xFFE00000),
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: Image.asset(
+                          'assets/images/Diseo_sin_ttulo_(4).png',
+                        ).image,
+                      ),
                       boxShadow: [
                         BoxShadow(
                           blurRadius: 20.0,
-                          color: Color(0x33000000),
+                          color: Color(0xBEAD0B0B),
                           offset: Offset(
                             0.0,
                             8.0,
@@ -96,50 +90,15 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         )
                       ],
                     ),
-                    child: Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(170.0, 0.0, 10.0, 0.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 10.0, 0.0, 10.0),
-                            child: Container(
-                              width: 175.0,
-                              height: 100.0,
-                              decoration: const BoxDecoration(
-                                color: Color(0xFFE00000),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 30.0, 0.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                  child: Image.asset(
-                                    'assets/images/DTI_Blanco.png',
-                                    width: 347.0,
-                                    height: 180.0,
-                                    fit: BoxFit.fill,
-                                    alignment: const Alignment(0.0, -1.0),
-                                  ),
-                                ).animateOnPageLoad(animationsMap[
-                                    'imageOnPageLoadAnimation1']!),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
                   ),
                 ),
                 Expanded(
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(20.0, 35.0, 20.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(20.0, 35.0, 20.0, 0.0),
                     child: GridView(
                       padding: EdgeInsets.zero,
-                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                         crossAxisSpacing: 27.0,
                         mainAxisSpacing: 26.0,
@@ -156,7 +115,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             context.pushNamed(
                               'Ductulator',
                               extra: <String, dynamic>{
-                                kTransitionInfoKey: const TransitionInfo(
+                                kTransitionInfoKey: TransitionInfo(
                                   hasTransition: true,
                                   transitionType:
                                       PageTransitionType.bottomToTop,
@@ -168,10 +127,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(16.0),
                             child: Image.asset(
-                              'assets/images/ductula.jpg',
+                              'assets/images/Diseo_sin_ttulo_(5).png',
                               width: 200.0,
                               height: 200.0,
-                              fit: BoxFit.cover,
+                              fit: BoxFit.fill,
                             ),
                           ),
                         ),
@@ -187,14 +146,14 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(16.0),
                             child: Image.asset(
-                              'assets/images/webpage.jpg',
+                              'assets/images/49svh_2.png',
                               width: 200.0,
                               height: 200.0,
                               fit: BoxFit.cover,
                             ),
                           ),
                         ).animateOnPageLoad(
-                            animationsMap['imageOnPageLoadAnimation2']!),
+                            animationsMap['imageOnPageLoadAnimation']!),
                         InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -206,7 +165,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(16.0),
                             child: Image.asset(
-                              'assets/images/Web_page_(4).png',
+                              'assets/images/ttt.png',
                               width: 200.0,
                               height: 200.0,
                               fit: BoxFit.cover,
@@ -224,7 +183,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(16.0),
                             child: Image.asset(
-                              'assets/images/conver.jpg',
+                              'assets/images/fijek_4.png',
                               width: 200.0,
                               height: 200.0,
                               fit: BoxFit.cover,
@@ -242,7 +201,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(16.0),
                             child: Image.asset(
-                              'assets/images/cfd.jpg',
+                              'assets/images/2emqy_5.png',
                               width: 200.0,
                               height: 200.0,
                               fit: BoxFit.cover,

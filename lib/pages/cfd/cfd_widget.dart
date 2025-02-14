@@ -46,22 +46,22 @@ class _CfdWidgetState extends State<CfdWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: const Color(0xFFE00000),
+          backgroundColor: Color(0xFFE00000),
           automaticallyImplyLeading: false,
           leading: FFButtonWidget(
             onPressed: () async {
               context.safePop();
             },
             text: 'Button',
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back_ios_sharp,
               size: 30.0,
             ),
             options: FFButtonOptions(
               height: 40.0,
-              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-              color: const Color(0xFFE00000),
+              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+              color: Color(0xFFE00000),
               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                     fontFamily: 'Inter Tight',
                     color: Colors.white,
@@ -73,7 +73,7 @@ class _CfdWidgetState extends State<CfdWidget> {
             ),
           ),
           title: Align(
-            alignment: const AlignmentDirectional(0.0, -1.0),
+            alignment: AlignmentDirectional(0.0, -1.0),
             child: Text(
               'CFD',
               style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -82,7 +82,7 @@ class _CfdWidgetState extends State<CfdWidget> {
                 fontSize: 22.0,
                 letterSpacing: 0.0,
                 shadows: [
-                  const Shadow(
+                  Shadow(
                     color: Colors.black,
                     offset: Offset(2.0, 2.0),
                     blurRadius: 2.0,
@@ -91,7 +91,7 @@ class _CfdWidgetState extends State<CfdWidget> {
               ),
             ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -101,14 +101,14 @@ class _CfdWidgetState extends State<CfdWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Expanded(
-                child: SizedBox(
+                child: Container(
                   width: double.infinity,
                   height: 500.0,
                   child: Stack(
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
                         child: PageView(
                           controller: _model.pageViewController ??=
                               PageController(initialPage: 0),
@@ -118,13 +118,13 @@ class _CfdWidgetState extends State<CfdWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 20.0, 0.0, 5.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Temperature differential',
@@ -132,7 +132,7 @@ class _CfdWidgetState extends State<CfdWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Inter',
-                                                color: const Color(0xFFD20101),
+                                                color: Color(0xFFD20101),
                                                 fontSize: 16.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
@@ -140,7 +140,7 @@ class _CfdWidgetState extends State<CfdWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             50.0, 0.0, 5.0, 0.0),
                                         child: Text(
                                           'Pressure',
@@ -148,7 +148,7 @@ class _CfdWidgetState extends State<CfdWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Inter',
-                                                color: const Color(0xFFD20101),
+                                                color: Color(0xFFD20101),
                                                 fontSize: 16.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
@@ -159,7 +159,7 @@ class _CfdWidgetState extends State<CfdWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       5.0, 0.0, 15.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -169,7 +169,7 @@ class _CfdWidgetState extends State<CfdWidget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     5.0, 0.0, 0.0, 0.0),
                                             child: FlutterFlowDropDown<double>(
                                               controller: _model
@@ -179,7 +179,7 @@ class _CfdWidgetState extends State<CfdWidget> {
                                               ),
                                               options: List<double>.from(
                                                   [1.0, 2.0, 3.0]),
-                                              optionLabels: const [
+                                              optionLabels: [
                                                 '5°C',
                                                 '10°C',
                                                 '15°C'
@@ -197,18 +197,18 @@ class _CfdWidgetState extends State<CfdWidget> {
                                                         color: Colors.white,
                                                         letterSpacing: 0.0,
                                                       ),
-                                              icon: const Icon(
+                                              icon: Icon(
                                                 Icons
                                                     .keyboard_arrow_down_rounded,
                                                 color: Colors.white,
                                                 size: 24.0,
                                               ),
-                                              fillColor: const Color(0xFFE00000),
+                                              fillColor: Color(0xFFE00000),
                                               elevation: 2.0,
-                                              borderColor: const Color(0x00FFFFFF),
+                                              borderColor: Color(0x00FFFFFF),
                                               borderWidth: 0.0,
                                               borderRadius: 8.0,
-                                              margin: const EdgeInsetsDirectional
+                                              margin: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       12.0, 0.0, 18.0, 0.0),
                                               hidesUnderline: true,
@@ -220,7 +220,7 @@ class _CfdWidgetState extends State<CfdWidget> {
                                         ],
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             15.0, 0.0, 0.0, 0.0),
                                         child: FlutterFlowDropDown<double>(
                                           controller: _model
@@ -230,7 +230,7 @@ class _CfdWidgetState extends State<CfdWidget> {
                                           ),
                                           options: List<double>.from(
                                               [1.0, 2.0, 3.0]),
-                                          optionLabels: const [
+                                          optionLabels: [
                                             '125 Pa.',
                                             '250 Pa.',
                                             '62 Pa.'
@@ -248,18 +248,18 @@ class _CfdWidgetState extends State<CfdWidget> {
                                                     letterSpacing: 0.0,
                                                   ),
                                           hintText: 'Select...',
-                                          icon: const Icon(
+                                          icon: Icon(
                                             Icons.keyboard_arrow_down_rounded,
                                             color: Colors.white,
                                             size: 24.0,
                                           ),
-                                          fillColor: const Color(0xFFE00000),
+                                          fillColor: Color(0xFFE00000),
                                           elevation: 2.0,
-                                          borderColor: const Color(0x00FFFFFF),
+                                          borderColor: Color(0x00FFFFFF),
                                           borderWidth: 0.0,
                                           borderRadius: 8.0,
                                           margin:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 12.0, 0.0),
                                           hidesUnderline: true,
                                           isOverButton: false,
@@ -271,13 +271,13 @@ class _CfdWidgetState extends State<CfdWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 30.0, 0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 5.0, 0.0),
                                         child: Text(
                                           'Height from the ground',
@@ -285,7 +285,7 @@ class _CfdWidgetState extends State<CfdWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Inter',
-                                                color: const Color(0xFFD20101),
+                                                color: Color(0xFFD20101),
                                                 fontSize: 16.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
@@ -299,7 +299,7 @@ class _CfdWidgetState extends State<CfdWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           5.0, 0.0, 0.0, 0.0),
                                       child: FlutterFlowDropDown<double>(
                                         controller:
@@ -309,7 +309,7 @@ class _CfdWidgetState extends State<CfdWidget> {
                                         ),
                                         options: List<double>.from(
                                             [1.0, 2.0, 3.0, 4.0, 5.0, 6.0]),
-                                        optionLabels: const [
+                                        optionLabels: [
                                           '3m.',
                                           '4m.',
                                           '5m.',
@@ -328,17 +328,17 @@ class _CfdWidgetState extends State<CfdWidget> {
                                               color: Colors.white,
                                               letterSpacing: 0.0,
                                             ),
-                                        icon: const Icon(
+                                        icon: Icon(
                                           Icons.keyboard_arrow_down_rounded,
                                           color: Color(0xFFF9F9F9),
                                           size: 24.0,
                                         ),
-                                        fillColor: const Color(0xFFE00000),
+                                        fillColor: Color(0xFFE00000),
                                         elevation: 2.0,
                                         borderColor: Colors.transparent,
                                         borderWidth: 0.0,
                                         borderRadius: 8.0,
-                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                        margin: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 18.0, 0.0),
                                         hidesUnderline: true,
                                         isOverButton: false,
@@ -348,7 +348,7 @@ class _CfdWidgetState extends State<CfdWidget> {
                                     ),
                                   ],
                                 ),
-                                const Align(
+                                Align(
                                   alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
@@ -377,13 +377,13 @@ class _CfdWidgetState extends State<CfdWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 25.0, 0.0, 35.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             35.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Velocity per height',
@@ -391,7 +391,7 @@ class _CfdWidgetState extends State<CfdWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Inter',
-                                                color: const Color(0xFFE00000),
+                                                color: Color(0xFFE00000),
                                                 fontSize: 20.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
@@ -419,9 +419,9 @@ class _CfdWidgetState extends State<CfdWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(0.0, 1.0),
+                        alignment: AlignmentDirectional(0.0, 1.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 16.0),
                           child: smooth_page_indicator.SmoothPageIndicator(
                             controller: _model.pageViewController ??=
@@ -431,7 +431,7 @@ class _CfdWidgetState extends State<CfdWidget> {
                             onDotClicked: (i) async {
                               await _model.pageViewController!.animateToPage(
                                 i,
-                                duration: const Duration(milliseconds: 500),
+                                duration: Duration(milliseconds: 500),
                                 curve: Curves.ease,
                               );
                               safeSetState(() {});
@@ -442,7 +442,7 @@ class _CfdWidgetState extends State<CfdWidget> {
                               dotWidth: 8.0,
                               dotHeight: 8.0,
                               dotColor: FlutterFlowTheme.of(context).accent1,
-                              activeDotColor: const Color(0xFFBF021A),
+                              activeDotColor: Color(0xFFBF021A),
                               paintStyle: PaintingStyle.fill,
                             ),
                           ),

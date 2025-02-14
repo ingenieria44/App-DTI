@@ -44,16 +44,16 @@ class _PressuredropsumWidgetState extends State<PressuredropsumWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFFD2D9DF),
+        backgroundColor: Color(0xFFD2D9DF),
         appBar: AppBar(
-          backgroundColor: const Color(0xFFE00000),
+          backgroundColor: Color(0xFFE00000),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back_ios_sharp,
               color: Colors.white,
               size: 30.0,
@@ -71,7 +71,7 @@ class _PressuredropsumWidgetState extends State<PressuredropsumWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -84,12 +84,12 @@ class _PressuredropsumWidgetState extends State<PressuredropsumWidget> {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 50.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 50.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               35.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'Pieces',
@@ -97,7 +97,7 @@ class _PressuredropsumWidgetState extends State<PressuredropsumWidget> {
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Inter',
-                                  color: const Color(0xFFEE0000),
+                                  color: Color(0xFFEE0000),
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
@@ -105,7 +105,7 @@ class _PressuredropsumWidgetState extends State<PressuredropsumWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               120.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'Pressure',
@@ -113,7 +113,7 @@ class _PressuredropsumWidgetState extends State<PressuredropsumWidget> {
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Inter',
-                                  color: const Color(0xFFEE0000),
+                                  color: Color(0xFFEE0000),
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
@@ -131,7 +131,7 @@ class _PressuredropsumWidgetState extends State<PressuredropsumWidget> {
                   Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      SizedBox(
+                      Container(
                         width: 200.0,
                         child: Builder(
                           builder: (context) {
@@ -160,7 +160,7 @@ class _PressuredropsumWidgetState extends State<PressuredropsumWidget> {
                                         .secondaryBackground,
                                     dense: false,
                                     contentPadding:
-                                        const EdgeInsetsDirectional.fromSTEB(
+                                        EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(8.0),
@@ -177,7 +177,7 @@ class _PressuredropsumWidgetState extends State<PressuredropsumWidget> {
                   Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      SizedBox(
+                      Container(
                         width: 200.0,
                         child: Builder(
                           builder: (context) {
@@ -206,7 +206,7 @@ class _PressuredropsumWidgetState extends State<PressuredropsumWidget> {
                                         .secondaryBackground,
                                     dense: false,
                                     contentPadding:
-                                        const EdgeInsetsDirectional.fromSTEB(
+                                        EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(8.0),
@@ -223,16 +223,16 @@ class _PressuredropsumWidgetState extends State<PressuredropsumWidget> {
                 ],
               ),
               Align(
-                alignment: const AlignmentDirectional(1.0, 0.0),
+                alignment: AlignmentDirectional(1.0, 0.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Align(
-                        alignment: const AlignmentDirectional(1.0, -1.0),
+                        alignment: AlignmentDirectional(1.0, -1.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               25.0, 10.0, 35.0, 0.0),
                           child: FFButtonWidget(
                             onPressed: () async {
@@ -245,11 +245,11 @@ class _PressuredropsumWidgetState extends State<PressuredropsumWidget> {
                             text: 'Delete value',
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 16.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: const Color(0xFFE00000),
+                              color: Color(0xFFE00000),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -268,13 +268,13 @@ class _PressuredropsumWidgetState extends State<PressuredropsumWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
                       child: Text(
                         'Total (Pa.)',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -287,7 +287,7 @@ class _PressuredropsumWidgetState extends State<PressuredropsumWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(35.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(35.0, 0.0, 0.0, 0.0),
                       child: Text(
                         functions
                             .sumarPRessure(FFAppState().Drop.toList())
@@ -304,13 +304,13 @@ class _PressuredropsumWidgetState extends State<PressuredropsumWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
                       child: Text(
                         'Total (in Wg.)',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(

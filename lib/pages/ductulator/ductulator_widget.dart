@@ -66,24 +66,24 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFFD2D9DF),
+        backgroundColor: Color(0xFFD2D9DF),
         appBar: AppBar(
-          backgroundColor: const Color(0xFFE00000),
+          backgroundColor: Color(0xFFE00000),
           automaticallyImplyLeading: false,
           leading: FFButtonWidget(
             onPressed: () async {
               context.safePop();
             },
             text: 'Button',
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back_ios_sharp,
               size: 30.0,
             ),
             options: FFButtonOptions(
               height: 40.0,
-              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-              color: const Color(0xFFE00000),
+              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+              color: Color(0xFFE00000),
               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                     fontFamily: 'Inter Tight',
                     color: Colors.white,
@@ -95,7 +95,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
             ),
           ),
           title: Align(
-            alignment: const AlignmentDirectional(0.0, -1.0),
+            alignment: AlignmentDirectional(0.0, -1.0),
             child: Text(
               'Ductulator',
               style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -104,7 +104,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                 fontSize: 22.0,
                 letterSpacing: 0.0,
                 shadows: [
-                  const Shadow(
+                  Shadow(
                     color: Colors.black,
                     offset: Offset(2.0, 2.0),
                     blurRadius: 2.0,
@@ -113,7 +113,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
               ),
             ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -123,14 +123,14 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Expanded(
-                child: SizedBox(
+                child: Container(
                   width: double.infinity,
                   height: 500.0,
                   child: Stack(
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
                         child: PageView(
                           controller: _model.pageViewController ??=
                               PageController(initialPage: 0),
@@ -150,7 +150,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Inter',
-                                            color: const Color(0xFFCF250E),
+                                            color: Color(0xFFCF250E),
                                             fontSize: 26.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w900,
@@ -165,17 +165,17 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                     width: 200.0,
                                     height: 200.0,
                                     fit: BoxFit.fitWidth,
-                                    alignment: const Alignment(-1.0, 0.0),
+                                    alignment: Alignment(-1.0, 0.0),
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 20.0, 0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Airflow',
@@ -183,7 +183,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Inter',
-                                                color: const Color(0xFFD20101),
+                                                color: Color(0xFFD20101),
                                                 fontSize: 20.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
@@ -194,7 +194,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       5.0, 0.0, 15.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -202,9 +202,9 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 15.0, 0.0),
-                                          child: SizedBox(
+                                          child: Container(
                                             width: 50.0,
                                             child: TextFormField(
                                               controller: _model
@@ -214,7 +214,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                               onChanged: (_) =>
                                                   EasyDebounce.debounce(
                                                 '_model.circularflowTextController',
-                                                const Duration(milliseconds: 2000),
+                                                Duration(milliseconds: 2000),
                                                 () => safeSetState(() {}),
                                               ),
                                               autofocus: false,
@@ -228,7 +228,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                   fontFamily: 'Inter',
                                                   letterSpacing: 0.0,
                                                   shadows: [
-                                                    const Shadow(
+                                                    Shadow(
                                                       color: Color(0xFF6C5A57),
                                                       offset: Offset(2.0, 2.0),
                                                       blurRadius: 3.0,
@@ -244,7 +244,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                         ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0x00000000),
                                                     width: 1.0,
                                                   ),
@@ -254,7 +254,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                 ),
                                                 focusedBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0x00000000),
                                                     width: 1.0,
                                                   ),
@@ -320,7 +320,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                             ),
                                             options:
                                                 List<bool>.from([false, true]),
-                                            optionLabels: const ['CFM', 'M3/HR'],
+                                            optionLabels: ['CFM', 'M3/HR'],
                                             onChanged: (val) => safeSetState(
                                                 () =>
                                                     _model.flowcoicValue = val),
@@ -335,18 +335,18 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                       letterSpacing: 0.0,
                                                     ),
                                             hintText: 'Unit',
-                                            icon: const Icon(
+                                            icon: Icon(
                                               Icons.keyboard_arrow_down_rounded,
                                               color: Color(0xFFF9F9F9),
                                               size: 24.0,
                                             ),
-                                            fillColor: const Color(0xFFE00000),
+                                            fillColor: Color(0xFFE00000),
                                             elevation: 2.0,
                                             borderColor: Colors.transparent,
                                             borderWidth: 0.0,
                                             borderRadius: 8.0,
                                             margin:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     12.0, 0.0, 18.0, 0.0),
                                             hidesUnderline: true,
                                             isOverButton: false,
@@ -359,13 +359,13 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 30.0, 0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 5.0, 0.0),
                                         child: Text(
                                           'Velocity (m/s)',
@@ -373,7 +373,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Inter',
-                                                color: const Color(0xFFD20101),
+                                                color: Color(0xFFD20101),
                                                 fontSize: 20.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
@@ -383,9 +383,9 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   35.0, 0.0, 35.0, 0.0),
-                                          child: SizedBox(
+                                          child: Container(
                                             width: 200.0,
                                             child: TextFormField(
                                               controller: _model
@@ -395,7 +395,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                               onChanged: (_) =>
                                                   EasyDebounce.debounce(
                                                 '_model.textvelcircTextController',
-                                                const Duration(milliseconds: 2000),
+                                                Duration(milliseconds: 2000),
                                                 () => safeSetState(() {}),
                                               ),
                                               autofocus: false,
@@ -418,7 +418,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                         ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0x00000000),
                                                     width: 1.0,
                                                   ),
@@ -428,7 +428,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                 ),
                                                 focusedBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0x00000000),
                                                     width: 1.0,
                                                   ),
@@ -484,7 +484,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 2.0, 0.0),
                                         child: Theme(
                                           data: ThemeData(
@@ -523,7 +523,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .alternate,
                                             ),
-                                            activeColor: const Color(0xFFEF3939),
+                                            activeColor: Color(0xFFEF3939),
                                             checkColor:
                                                 FlutterFlowTheme.of(context)
                                                     .info,
@@ -531,7 +531,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 20.0, 0.0),
                                         child: Text(
                                           'Suggest',
@@ -548,7 +548,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 30.0, 0.0, 40.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -559,14 +559,14 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Inter',
-                                              color: const Color(0xFFD20101),
+                                              color: Color(0xFFD20101),
                                               fontSize: 20.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
                                             ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             35.0, 0.0, 20.0, 0.0),
                                         child: Text(
                                           valueOrDefault<String>(
@@ -592,7 +592,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 10.0, 0.0),
                                         child: FlutterFlowDropDown<bool>(
                                           controller: _model
@@ -603,7 +603,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                           ),
                                           options:
                                               List<bool>.from([false, true]),
-                                          optionLabels: const ['mm.', 'in.'],
+                                          optionLabels: ['mm.', 'in.'],
                                           onChanged: (val) => safeSetState(() =>
                                               _model.diametercircularValue =
                                                   val),
@@ -618,18 +618,18 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                     letterSpacing: 0.0,
                                                   ),
                                           hintText: 'Unit',
-                                          icon: const Icon(
+                                          icon: Icon(
                                             Icons.keyboard_arrow_down_rounded,
                                             color: Colors.white,
                                             size: 24.0,
                                           ),
-                                          fillColor: const Color(0xFFE00000),
+                                          fillColor: Color(0xFFE00000),
                                           elevation: 2.0,
                                           borderColor: Colors.transparent,
                                           borderWidth: 0.0,
                                           borderRadius: 8.0,
                                           margin:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 18.0, 0.0),
                                           hidesUnderline: true,
                                           isOverButton: false,
@@ -646,14 +646,14 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                   child: Text(
                                     '    Elliptical',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Inter',
-                                          color: const Color(0xFFCF250E),
+                                          color: Color(0xFFCF250E),
                                           fontSize: 26.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w900,
@@ -667,17 +667,17 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                     width: 200.0,
                                     height: 200.0,
                                     fit: BoxFit.fitWidth,
-                                    alignment: const Alignment(-1.0, 0.0),
+                                    alignment: Alignment(-1.0, 0.0),
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 20.0, 0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Airflow',
@@ -685,7 +685,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Inter',
-                                                color: const Color(0xFFD20101),
+                                                color: Color(0xFFD20101),
                                                 fontSize: 20.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
@@ -700,9 +700,9 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                   children: [
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 15.0, 0.0),
-                                        child: SizedBox(
+                                        child: Container(
                                           width: 200.0,
                                           child: TextFormField(
                                             controller:
@@ -727,7 +727,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                               enabledBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -735,7 +735,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -786,7 +786,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           12.0, 0.0, 12.0, 0.0),
                                       child: FlutterFlowDropDown<bool>(
                                         controller:
@@ -795,7 +795,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                           _model.elipuntValue ??= false,
                                         ),
                                         options: List<bool>.from([false, true]),
-                                        optionLabels: const ['CFM', 'M3/HR'],
+                                        optionLabels: ['CFM', 'M3/HR'],
                                         onChanged: (val) => safeSetState(
                                             () => _model.elipuntValue = val),
                                         width: 200.0,
@@ -809,17 +809,17 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                               fontWeight: FontWeight.bold,
                                             ),
                                         hintText: 'Unit',
-                                        icon: const Icon(
+                                        icon: Icon(
                                           Icons.keyboard_arrow_down_rounded,
                                           color: Colors.white,
                                           size: 24.0,
                                         ),
-                                        fillColor: const Color(0xFFE00000),
+                                        fillColor: Color(0xFFE00000),
                                         elevation: 2.0,
                                         borderColor: Colors.transparent,
                                         borderWidth: 0.0,
                                         borderRadius: 8.0,
-                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                        margin: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         hidesUnderline: true,
                                         isOverButton: false,
@@ -830,13 +830,13 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                   ],
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 30.0, 0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Velocity (m/s)',
@@ -844,14 +844,14 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Inter',
-                                                color: const Color(0xFFD20101),
+                                                color: Color(0xFFD20101),
                                                 fontSize: 20.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
                                               ),
                                         ),
                                       ),
-                                      const Opacity(
+                                      Opacity(
                                         opacity: 0.0,
                                         child: Padding(
                                           padding:
@@ -889,13 +889,13 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 35.0, 0.0, 35.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             45.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Measures:',
@@ -903,7 +903,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Inter',
-                                                color: const Color(0xFFD20101),
+                                                color: Color(0xFFD20101),
                                                 fontSize: 20.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
@@ -914,13 +914,13 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 18.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             45.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Horizontal:',
@@ -928,7 +928,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Inter',
-                                                color: const Color(0xFFD20101),
+                                                color: Color(0xFFD20101),
                                                 fontSize: 20.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
@@ -938,9 +938,9 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 20.0, 0.0),
-                                          child: SizedBox(
+                                          child: Container(
                                             width: 200.0,
                                             child: TextFormField(
                                               controller:
@@ -966,7 +966,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                         ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0x00000000),
                                                     width: 1.0,
                                                   ),
@@ -976,7 +976,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                 ),
                                                 focusedBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0x00000000),
                                                     width: 1.0,
                                                   ),
@@ -1035,13 +1035,13 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 20.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             45.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Vertical:',
@@ -1049,7 +1049,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Inter',
-                                                color: const Color(0xFFD20101),
+                                                color: Color(0xFFD20101),
                                                 fontSize: 20.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
@@ -1059,9 +1059,9 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   40.0, 0.0, 15.0, 0.0),
-                                          child: SizedBox(
+                                          child: Container(
                                             width: 200.0,
                                             child: TextFormField(
                                               controller:
@@ -1088,7 +1088,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                         ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0x00000000),
                                                     width: 1.0,
                                                   ),
@@ -1098,7 +1098,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                 ),
                                                 focusedBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0x00000000),
                                                     width: 1.0,
                                                   ),
@@ -1157,7 +1157,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       52.0, 0.0, 0.0, 0.0),
                                   child: FlutterFlowDropDown<bool>(
                                     controller:
@@ -1166,7 +1166,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                       _model.uniteliptValue ??= true,
                                     ),
                                     options: List<bool>.from([true, false]),
-                                    optionLabels: const ['in.', 'mm.'],
+                                    optionLabels: ['in.', 'mm.'],
                                     onChanged: (val) => safeSetState(
                                         () => _model.uniteliptValue = val),
                                     width: 200.0,
@@ -1180,17 +1180,17 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                           fontWeight: FontWeight.bold,
                                         ),
                                     hintText: 'Select...',
-                                    icon: const Icon(
+                                    icon: Icon(
                                       Icons.keyboard_arrow_down_rounded,
                                       color: Colors.white,
                                       size: 24.0,
                                     ),
-                                    fillColor: const Color(0xFFE00000),
+                                    fillColor: Color(0xFFE00000),
                                     elevation: 2.0,
                                     borderColor: Colors.transparent,
                                     borderWidth: 0.0,
                                     borderRadius: 8.0,
-                                    margin: const EdgeInsetsDirectional.fromSTEB(
+                                    margin: EdgeInsetsDirectional.fromSTEB(
                                         12.0, 0.0, 12.0, 0.0),
                                     hidesUnderline: true,
                                     isOverButton: false,
@@ -1204,9 +1204,9 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.0, -1.0),
+                                  alignment: AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         20.0, 0.0, 0.0, 0.0),
                                     child: Text(
                                       'Half Round',
@@ -1214,7 +1214,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Inter',
-                                            color: const Color(0xFFCF250E),
+                                            color: Color(0xFFCF250E),
                                             fontSize: 26.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w900,
@@ -1232,13 +1232,13 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 20.0, 0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Airflow:',
@@ -1246,7 +1246,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Inter',
-                                                color: const Color(0xFFD20101),
+                                                color: Color(0xFFD20101),
                                                 fontSize: 20.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
@@ -1261,9 +1261,9 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                   children: [
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 15.0, 0.0),
-                                        child: SizedBox(
+                                        child: Container(
                                           width: 200.0,
                                           child: TextFormField(
                                             controller:
@@ -1288,7 +1288,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                               enabledBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -1296,7 +1296,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -1347,7 +1347,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           12.0, 0.0, 12.0, 0.0),
                                       child: FlutterFlowDropDown<bool>(
                                         controller: _model
@@ -1356,7 +1356,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                           _model.halfairunitValue ??= false,
                                         ),
                                         options: List<bool>.from([true, false]),
-                                        optionLabels: const ['m3/h.', 'cfm.'],
+                                        optionLabels: ['m3/h.', 'cfm.'],
                                         onChanged: (val) => safeSetState(() =>
                                             _model.halfairunitValue = val),
                                         width: 200.0,
@@ -1365,22 +1365,22 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Inter',
-                                              color: const Color(0xFFFFF5F5),
+                                              color: Color(0xFFFFF5F5),
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
                                             ),
                                         hintText: 'Select...',
-                                        icon: const Icon(
+                                        icon: Icon(
                                           Icons.keyboard_arrow_down_rounded,
                                           color: Colors.white,
                                           size: 24.0,
                                         ),
-                                        fillColor: const Color(0xFFE00000),
+                                        fillColor: Color(0xFFE00000),
                                         elevation: 2.0,
                                         borderColor: Colors.transparent,
                                         borderWidth: 0.0,
                                         borderRadius: 8.0,
-                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                        margin: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         hidesUnderline: true,
                                         isOverButton: false,
@@ -1391,13 +1391,13 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                   ],
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 30.0, 0.0, 35.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Velocity (m/s): ',
@@ -1405,7 +1405,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Inter',
-                                                color: const Color(0xFFD20101),
+                                                color: Color(0xFFD20101),
                                                 fontSize: 20.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
@@ -1413,7 +1413,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             25.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           valueOrDefault<String>(
@@ -1445,7 +1445,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           50.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Horizontal:',
@@ -1453,7 +1453,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Inter',
-                                              color: const Color(0xFFD20101),
+                                              color: Color(0xFFD20101),
                                               fontSize: 20.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
@@ -1461,7 +1461,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           25.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         functions
@@ -1483,13 +1483,13 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                   ],
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 25.0, 0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             50.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Vertical:',
@@ -1497,7 +1497,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Inter',
-                                                color: const Color(0xFFD20101),
+                                                color: Color(0xFFD20101),
                                                 fontSize: 20.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
@@ -1507,9 +1507,9 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   35.0, 0.0, 35.0, 0.0),
-                                          child: SizedBox(
+                                          child: Container(
                                             width: 200.0,
                                             child: TextFormField(
                                               controller: _model
@@ -1536,7 +1536,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                         ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0x00000000),
                                                     width: 1.0,
                                                   ),
@@ -1546,7 +1546,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                 ),
                                                 focusedBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0x00000000),
                                                     width: 1.0,
                                                   ),
@@ -1602,7 +1602,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: FlutterFlowDropDown<bool>(
                                           controller: _model
@@ -1612,7 +1612,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                           ),
                                           options:
                                               List<bool>.from([true, false]),
-                                          optionLabels: const ['in.', 'mm.'],
+                                          optionLabels: ['in.', 'mm.'],
                                           onChanged: (val) => safeSetState(() =>
                                               _model.halflenghunitValue = val),
                                           width: 80.0,
@@ -1622,23 +1622,23 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Inter',
-                                                    color: const Color(0xFFFFF5F5),
+                                                    color: Color(0xFFFFF5F5),
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.bold,
                                                   ),
                                           hintText: 'Unit',
-                                          icon: const Icon(
+                                          icon: Icon(
                                             Icons.keyboard_arrow_down_rounded,
                                             color: Colors.white,
                                             size: 24.0,
                                           ),
-                                          fillColor: const Color(0xFFE00000),
+                                          fillColor: Color(0xFFE00000),
                                           elevation: 2.0,
                                           borderColor: Colors.transparent,
                                           borderWidth: 0.0,
                                           borderRadius: 8.0,
                                           margin:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 12.0, 0.0),
                                           hidesUnderline: true,
                                           isOverButton: false,
@@ -1655,9 +1655,9 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(0.0, 1.0),
+                        alignment: AlignmentDirectional(0.0, 1.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 16.0),
                           child: smooth_page_indicator.SmoothPageIndicator(
                             controller: _model.pageViewController ??=
@@ -1667,7 +1667,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                             onDotClicked: (i) async {
                               await _model.pageViewController!.animateToPage(
                                 i,
-                                duration: const Duration(milliseconds: 500),
+                                duration: Duration(milliseconds: 500),
                                 curve: Curves.ease,
                               );
                               safeSetState(() {});
@@ -1678,7 +1678,7 @@ class _DuctulatorWidgetState extends State<DuctulatorWidget> {
                               dotWidth: 8.0,
                               dotHeight: 8.0,
                               dotColor: FlutterFlowTheme.of(context).accent1,
-                              activeDotColor: const Color(0xFFBF021A),
+                              activeDotColor: Color(0xFFBF021A),
                               paintStyle: PaintingStyle.fill,
                             ),
                           ),
